@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'mottosso/maya'
+      image 'mottosso/maya:2019'
     }
 
   }
@@ -16,7 +16,7 @@ pipeline {
 
         stage('error') {
           steps {
-            sh 'mayapy -c "from maya import standalone, cmds;standalone.initialize();"'
+            sh 'mayapy $WORKSPACE/mayapytest.py'
           }
         }
 
