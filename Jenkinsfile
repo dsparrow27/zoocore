@@ -10,13 +10,16 @@ pipeline {
       parallel {
         stage('test') {
           steps {
-            sh 'printenv'
+            sh '''printenv
+ls
+pwd'''
           }
         }
 
         stage('error') {
           steps {
-            sh 'sh mayapy $WORKSPACE/mayapytest.py'
+            sh '''cd $WORKSPACE
+sh /usr/autodesk/maya//bin/mayapy "$WORKSPACE/mayapytest.py"'''
           }
         }
 
