@@ -16,7 +16,7 @@ pipeline {
 
         stage('error') {
           steps {
-            sh 'mayapy $WORKSPACE/mayapytest.py'
+            sh 'sh mayapy $WORKSPACE/mayapytest.py'
           }
         }
 
