@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'mottosso/maya:2019'
+      image 'mottosso/maya'
     }
 
   }
