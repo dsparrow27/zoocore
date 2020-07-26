@@ -18,8 +18,8 @@ pwd'''
 
         stage('error') {
           steps {
-            sh '''cd $WORKSPACE
-sh /usr/autodesk/maya//bin/mayapy "$WORKSPACE/mayapytest.py"'''
+            sh '''printenv
+/usr/autodesk/maya//bin/mayapy "$WORKSPACE/mayapytest.py"'''
           }
         }
 
