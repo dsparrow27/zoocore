@@ -16,7 +16,7 @@ pipeline {
 
         stage('error') {
           steps {
-            sh 'mayapy -c "from maya import standalone, cmds;"'
+            sh 'mayapy -c "from maya import standalone, cmds;standalone.initialize();"'
           }
         }
 
