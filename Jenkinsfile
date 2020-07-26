@@ -10,7 +10,7 @@ pipeline {
       parallel {
         stage('test') {
           steps {
-            echo 'printenv'
+            sh 'printenv'
           }
         }
 
